@@ -23,6 +23,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:text="83"
         app:layout_constraintStart_toStartOf="@+id/lblWeight"
         app:layout_constraintTop_toBottomOf="@+id/lblWeight" />
 
@@ -44,6 +45,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:text="1.75"
         app:layout_constraintStart_toStartOf="@+id/lblHeight"
         app:layout_constraintTop_toBottomOf="@+id/lblHeight" />
 
@@ -68,4 +70,12 @@
         android:text="Help"
         app:layout_constraintStart_toEndOf="@+id/btnCal"
         app:layout_constraintTop_toBottomOf="@+id/edHeight" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/btnCal"
+        app:layout_constraintTop_toBottomOf="@+id/btnCal" />
 </android.support.constraint.ConstraintLayout>
