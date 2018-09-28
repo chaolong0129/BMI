@@ -1,6 +1,7 @@
 package com.rff.bmi;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,7 +52,10 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainActivity","BMI : " + bmi);
         Toast.makeText(this, getString(R.string.your_bmi_is) + bmi, Toast.LENGTH_LONG).show();
         result.setText(getString(R.string.your_bmi_is) + bmi);
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        Intent intent = new Intent(this, ResultActivity.class);
+        intent.putExtra("BMI", bmi);
+        startActivity(intent);
+        /*AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("BMI")
                 .setMessage(getString(R.string.your_bmi_is) + bmi)
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
@@ -61,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                         edweight.setText("");
                     }
                 })
-                .show();
+                .show();*/
     }
 
     public void help(View view)
